@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
       home: Scaffold(
@@ -49,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(0),
               bottomRight: Radius.circular(0),
+
             ),
           ),
           child: ListView(
@@ -450,6 +452,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.person_outline,
+              color: AppColorConstant.appTextColor,
+            ),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [],
+
       ),
     );
   }
