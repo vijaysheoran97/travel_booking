@@ -54,7 +54,8 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 28,),
-            Row(
+            Row(crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Don't have an account?"),
                 Text("Register",style: TextStyle(color: AppColorConstant.appElevatedButtonColor),),
