@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_booking/travel_booking/ui/screens/home_screen.dart';
+import 'package:travel_booking/travel_booking/ui/screens/register_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/widget/navigation_bar.dart';
 
@@ -9,14 +9,34 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        backgroundColor: AppColorConstant.appScendoryColor,
-        title: const Text(
-          "Welcome to Travel Booking",
-          style: TextStyle(color: AppColorConstant.appTextColor),
+      drawer: Drawer(
+        child: Container(
+          color: AppColorConstant.appScendoryColor,
+          child: Column(
+            children: [
+              // Add your drawer items here
+            ],
+          ),
         ),
+      ),
+      appBar: AppBar(
+        backgroundColor: AppColorConstant.appScendoryColor,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.dark_mode_outlined,
+              color: AppColorConstant.appTextColorblack,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.person_outline,
+              color: AppColorConstant.appTextColorblack,
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -31,7 +51,10 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: GestureDetector(
                 onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BottomNavigation()));
                 },
                 child: Container(
                   width: 400,
@@ -53,14 +76,28 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 28,),
+            SizedBox(
+              height: 20,
+            ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Don't have an account?"),
-                Text("Register",style: TextStyle(color: AppColorConstant.appElevatedButtonColor),),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterScreen()));
+                    },
+                    child: Text(
+                      "Register",
+                      style:
+                          TextStyle(color: AppColorConstant.appScendoryColor),
+                    )),
               ],
             ),
-
           ],
         ),
       ),
