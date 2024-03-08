@@ -17,6 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
       theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
       home: Scaffold(
         appBar: AppBar(
+          iconTheme: const IconThemeData(
+            color: AppColorConstant.appTextColor,
+          ),
           backgroundColor: AppColorConstant.appBarColor,
           actions: [
             IconButton(
@@ -32,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: AppColorConstant.appTextColor,
               ),
             ),
-
             IconButton(
               onPressed: () {},
               icon: const Icon(
