@@ -60,12 +60,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ClipOval(
-                      child: Image.asset(
-                        'assets/images/images.jpg',
-                        height: 50,
-                        width: 50,
-                        fit: BoxFit.cover,
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: const BoxDecoration(shape: BoxShape.circle),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/images.jpg',
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -82,11 +85,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               ListTile(
-                title: const Text(
+                title: Text(
                   'Menu',
                   style: TextStyle(
-                      color: AppColorConstant.appTextColorblack,
-                      fontWeight: FontWeight.w600),
+                    color: isDarkMode
+                        ? AppColorConstant.appTextColor
+                        : AppColorConstant.appTextColorblack,
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
                 ),
                 onTap: () {},
               ),
@@ -127,11 +134,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const Divider(),
               ListTile(
-                title: const Text(
+                title: Text(
                   'Others',
                   style: TextStyle(
-                      color: AppColorConstant.appTextColorblack,
-                      fontWeight: FontWeight.w600),
+                    color: isDarkMode
+                        ? AppColorConstant.appTextColor
+                        : AppColorConstant.appTextColorblack,
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                  ),
                 ),
                 onTap: () {},
               ),
@@ -207,10 +218,237 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        body: const Column(
-          children: [
-            // Your body content here
-          ],
+
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: const BoxDecoration(shape: BoxShape.circle),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/images.jpg',
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    Text(
+                      'Hi, Andy\nNetherlands',
+                      style: TextStyle(
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(
+                      width: 68,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                          width: 2.0, // Border width
+                        ),
+                      ),
+                      height: 42,
+                      width: 42,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.notification_add_outlined,
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                          width: 2.0, // Border width
+                        ),
+                      ),
+                      height: 42,
+                      width: 42,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.message,
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Search...',
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: isDarkMode
+                          ? AppColorConstant.appTextColor
+                          : AppColorConstant.appTextColorblack,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(
+                        color: isDarkMode
+                            ? AppColorConstant.appTextColor
+                            : AppColorConstant.appTextColorblack,
+                        width: 2.0, // Border width
+                      ),
+                    ),
+                    height: 42,
+                    width: 42,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.sailing,
+                        color: isDarkMode
+                            ? AppColorConstant.appTextColor
+                            : AppColorConstant.appTextColorblack,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(
+                        color: isDarkMode
+                            ? AppColorConstant.appTextColor
+                            : AppColorConstant.appTextColorblack,
+                        width: 2.0, // Border width
+                      ),
+                    ),
+                    height: 42,
+                    width: 42,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.car_crash_outlined,
+                        color: isDarkMode
+                            ? AppColorConstant.appTextColor
+                            : AppColorConstant.appTextColorblack,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(
+                        color: isDarkMode
+                            ? AppColorConstant.appTextColor
+                            : AppColorConstant.appTextColorblack,
+                        width: 2.0, // Border width
+                      ),
+                    ),
+                    height: 42,
+                    width: 42,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.settings_input_component,
+                        color: isDarkMode
+                            ? AppColorConstant.appTextColor
+                            : AppColorConstant.appTextColorblack,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        'Airport',
+                        style: TextStyle(
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                          fontSize: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                      ),
+                      Text(
+                        'Rental',
+                        style: TextStyle(
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                          fontSize: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                      ),
+                      Text(
+                        'More',
+                        style: TextStyle(
+                          color: isDarkMode
+                              ? AppColorConstant.appTextColor
+                              : AppColorConstant.appTextColorblack,
+                          fontSize: MediaQuery.of(context).size.width * 0.03,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Text(
+                'Frequently visited',
+                style: TextStyle(
+                  color: isDarkMode
+                      ? AppColorConstant.appTextColor
+                      : AppColorConstant.appTextColorblack,
+                  fontWeight: FontWeight.bold,
+                  fontSize: MediaQuery.of(context).size.width * 0.04,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
