@@ -15,4 +15,5 @@ class AppColorConstant {
   static const appArowbackColor = Color(0xFF333333);
   static const appButtonStyle = Color(0xFFFFBA4C);
   static const appButtonStyle2 = Color(0xFF222222);
+  static const appArrowForwardColor = Colors.grey;
 }
