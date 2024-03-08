@@ -452,18 +452,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.person_outline,
-              color: AppColorConstant.appTextColor,
-            ),
-          ),
-        ],
-      ),
-      body: Column(
-        children: [],
-
       ),
     );
   }
