@@ -12,6 +12,13 @@ class AppStringConstant{
   static const String others = 'Others';
   static const String components = 'Components';
   static const String setting = 'Setting';
+  static const String myAddress = 'My Address';
+  static const String payment = 'Payment Method';
+  static const String changePassword = 'Change Password';
+  static const String forgetPassword = 'Forget Password';
+  static const String security = 'Security';
+  static const String language = 'Language';
+  static const String notification = 'Notification';
   static const String switchTo = 'Switch To Dark Mode';
   static const String frequentlyVisited = 'Frequently visited';
   static const String tourGuide = 'Tour Guide';

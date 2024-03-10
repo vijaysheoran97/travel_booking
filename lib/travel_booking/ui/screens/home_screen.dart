@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/travel_booking/ui/drawer/setting_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_string_constent.dart';
 import 'package:travel_booking/travel_booking/ui/widget/likeable_image.dart';
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
           iconTheme: const IconThemeData(
             color: AppColorConstant.appTextColor,
           ),
-          backgroundColor: AppColorConstant.appBarColor,
+          backgroundColor: AppColorConstant.appScendoryColor,
           actions: [
             IconButton(
               onPressed: () {
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               DrawerHeader(
                 decoration: const BoxDecoration(
-                  color: AppColorConstant.appBarColor,
+                  color: AppColorConstant.appScendoryColor,
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: AppColorConstant.appBarColor,
+                    color: AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
@@ -122,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: AppColorConstant.appBarColor,
+                    color:AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
@@ -153,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: AppColorConstant.appBarColor,
+                    color:AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
@@ -171,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: AppColorConstant.appBarColor,
+                    color: AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
@@ -182,14 +183,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 title: const Text(AppStringConstant.setting),
                 trailing: const Icon(Icons.arrow_forward_ios_outlined),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const SettingScreen();
+                  }));
+                },
               ),
               const Divider(),
               ListTile(
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: AppColorConstant.appBarColor,
+                    color: AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
