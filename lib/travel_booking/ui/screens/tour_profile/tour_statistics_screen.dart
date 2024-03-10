@@ -3,6 +3,8 @@ import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_string_constent.dart';
 
 class TourStatistics extends StatelessWidget {
+  const TourStatistics({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const Column(

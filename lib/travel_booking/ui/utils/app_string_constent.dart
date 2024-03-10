@@ -30,6 +30,10 @@ class AppStringConstant{
   static const String experienceNo = '3 Years';
   static const String rateNo = '4.0';
   static const String rate = 'Rate';
+  static const String aboutUs = 'About Us';
+  static const String about = 'Lorem ipsum dolor sit amet,consecrate '
+      'adipicing elite.Tortor ac leoo lorem nisl.Viverra vulputate sodales '
+      'quis,et dui,lacus.laculis eu egestas vel.';
   static const String tahitiBeach = 'Tahiti Beach\n235';
   static const String stLuciaMountain = 'St.Lucia Mountain\n235';
   static const String emiliaRicardo = 'Emilia Ricardo\n25';

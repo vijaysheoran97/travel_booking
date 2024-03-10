@@ -67,7 +67,23 @@ class _TourProfileScreenState extends State<TourProfileScreen> {
               top: screenHeight * 0.48,
               left: 0,
               right: 0,
-              child: TourStatistics(),
+              child: const TourStatistics(),
+            ),
+            Padding(
+              padding: EdgeInsets.only( top: screenHeight * 0.56,left:screenWidth * 0.05, ),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppStringConstant.aboutUs,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 12,),
+                  Text(AppStringConstant.about),
+                ],
+              ),
             ),
           ],
         ),
