@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_booking/travel_booking/ui/drawer/components_screen.dart';
 import 'package:travel_booking/travel_booking/ui/drawer/setting_screen.dart';
+import 'package:travel_booking/travel_booking/ui/screens/tour_profile/tour_profile_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_string_constent.dart';
 import 'package:travel_booking/travel_booking/ui/widget/likeable_image.dart';
@@ -462,7 +463,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                const Row(
+                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     LikableImage(imagePath: AppStringConstant.image1Path),
@@ -481,46 +482,58 @@ class _HomeScreenState extends State<HomeScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Text(
-                        AppStringConstant.tourGuide,
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                     Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: GestureDetector(
+                        child: const Text(
+                          AppStringConstant.tourGuide,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const TourProfileScreen(),
                           ),
-                          height: 130,
-                          width: 150,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Image.asset(
-                              AppStringConstant.image3Path,
-                              fit: BoxFit.cover,
+                        );
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            height: 130,
+                            width: 150,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                AppStringConstant.image3Path,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 16),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          height: 130,
-                          width: 150,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Image.asset(
-                              AppStringConstant.image4Path,
-                              fit: BoxFit.cover,
+                          const SizedBox(width: 16),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            height: 130,
+                            width: 150,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                AppStringConstant.image4Path,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
