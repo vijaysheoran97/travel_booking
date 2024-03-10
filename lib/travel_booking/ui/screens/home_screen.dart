@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/travel_booking/ui/drawer/components_screen.dart';
 import 'package:travel_booking/travel_booking/ui/drawer/setting_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_string_constent.dart';
@@ -116,14 +117,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 title: const Text(AppStringConstant.overview),
                 trailing: const Icon(Icons.arrow_forward_ios_outlined),
-                onTap: () {},
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return const HomeScreen();
+                }));},
               ),
               const Divider(),
               ListTile(
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color:AppColorConstant.appScendoryColor,
+                    color: AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
@@ -154,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color:AppColorConstant.appScendoryColor,
+                    color: AppColorConstant.appScendoryColor,
                   ),
                   height: 35,
                   width: 35,
@@ -165,7 +168,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 title: const Text(AppStringConstant.components),
                 trailing: const Icon(Icons.arrow_forward_ios_outlined),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ComponentsScreen();
+                  }));
+                },
               ),
               const Divider(),
               ListTile(

@@ -8,6 +8,7 @@ class AppStringConstant{
   static const String more = 'More';
   static const String menu = 'Menu';
   static const String overview = 'Overview';
+  static const String splashScreen = 'Splash Screen';
   static const String pages = 'Pages';
   static const String others = 'Others';
   static const String components = 'Components';

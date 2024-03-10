@@ -47,7 +47,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.myAddress),
             onTap: () {},
           ),
-          Divider(),
+          const Divider(),
           ListTile(
             leading: Container(
               decoration: BoxDecoration(
@@ -64,7 +64,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.payment),
             onTap: () {},
           ),
-          Divider(), ListTile(
+          const Divider(), ListTile(
             leading: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -80,7 +80,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.changePassword),
             onTap: () {},
           ),
-          Divider(), ListTile(
+          const Divider(), ListTile(
             leading: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -96,7 +96,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.forgetPassword),
             onTap: () {},
           ),
-          Divider(), ListTile(
+          const Divider(), ListTile(
             leading: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -112,7 +112,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.security),
             onTap: () {},
           ),
-          Divider(), ListTile(
+          const Divider(), ListTile(
             leading: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -128,7 +128,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.language),
             onTap: () {},
           ),
-          Divider(), ListTile(
+          const Divider(), ListTile(
             leading: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -144,7 +144,7 @@ class _SettingScreenState extends State<SettingScreen> {
             title: const Text(AppStringConstant.notification),
             onTap: () {},
           ),
-          Divider(),
+          const Divider(),
         ],
       ),
     );
