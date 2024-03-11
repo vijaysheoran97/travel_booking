@@ -37,6 +37,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ],
       ),
+
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -81,6 +82,7 @@ class WelcomeScreen extends StatelessWidget {
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
+
                       ),
                     ),
                   ),
