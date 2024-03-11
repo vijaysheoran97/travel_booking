@@ -14,12 +14,13 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    bool _obscurePassword = true;
     final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
         drawer: Drawer(
           child: Container(
             color: AppColorConstant.appScendoryColor,
-            child: Column(
+            child: const Column(
               children: [
                 // Add your drawer items here
               ],
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: screenSize.height * 0.03,
                     ),
-                    Text(
+                    const Text(
                       'Hi, Welcome Back!',
                       style: TextStyle(
                           color: AppColorConstant.appTextColor,
@@ -70,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Container(
                 height: screenSize.height * 1,
                 width: screenSize.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColorConstant.appTextColor,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30.0),
@@ -83,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'PhoneNo',
                           style: TextStyle(
                               color: AppColorConstant.appTextColorblack54),
@@ -100,11 +101,51 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderRadius: BorderRadius.circular(15),
                               borderSide: BorderSide.none,
                             ),
-                            contentPadding: EdgeInsets.symmetric(
+                            contentPadding: const EdgeInsets.symmetric(
                               vertical: 10.0,
                               // Adjust the vertical padding as needed
                               horizontal:
                                   15.0, // Adjust the horizontal padding as needed
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: screenSize.height * 0.03,
+                        ),
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                              color: AppColorConstant.appTextColorblack54),
+                        ),
+                        SizedBox(
+                          height: screenSize.height * 0.01,
+                        ),
+                        TextFormField(
+                          obscureText: _obscurePassword,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.black.withOpacity(0.09),
+                            hintText: 'Enter your password',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide.none,
+                            ),
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                              // Adjust the vertical padding as needed
+                              horizontal:
+                              15.0, // Adjust the horizontal padding as needed
+                            ),
+                            suffixIcon: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword;
+                                });
+                              },
+                              child: Icon(
+                                _obscurePassword ? Icons.visibility : Icons.visibility_off,
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                         ),
@@ -115,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           alignment: Alignment.bottomCenter,
                           child: GestureDetector(
                             onTap: () {
-                               Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
+                               Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavigation()));
                             },
                             child: Container(
                               width: 400,
@@ -124,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: AppColorConstant.appScendoryColor,
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "Continue with PhoneNo",
                                   style: TextStyle(
@@ -142,9 +183,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Row(
                           children: [
-                            Expanded(
+                            const Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 40.0),
+                                padding: EdgeInsets.only(left: 40.0),
                                 child: Divider(),
                               ),
                             ),
@@ -160,9 +201,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                            Expanded(
+                            const Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.only(right: 40.0),
+                                padding: EdgeInsets.only(right: 40.0),
                                 child: Divider(),
                               ),
                             ),
@@ -246,12 +287,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: screenSize.height * 0.01,
                         ),
                         Row(
-                          children: [Spacer(),
+                          children: [const Spacer(),
                             GestureDetector(
                               onTap: (){
-Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetScreen()));
+Navigator.push(context, MaterialPageRoute(builder: (context)=>const ForgetScreen()));
                               },
-                                child: Text(
+                                child: const Text(
                               "Forget Password?",
                               style: TextStyle(
                                   color: AppColorConstant.appScendoryColor),
@@ -265,16 +306,16 @@ Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetScreen()));
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Don't have an account?"),
+                            const Text("Don't have an account?"),
                             TextButton(
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              RegisterScreen()));
+                                              const RegisterScreen()));
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Sign Up",
                                   style: TextStyle(
                                       color: AppColorConstant.appScendoryColor),

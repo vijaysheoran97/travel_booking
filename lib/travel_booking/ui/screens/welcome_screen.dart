@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/travel_booking/ui/screens/login_screen.dart';
 import 'package:travel_booking/travel_booking/ui/screens/register_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/widget/navigation_bar.dart';
@@ -54,7 +55,7 @@ class WelcomeScreen extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => BottomNavigation()));
+                          builder: (context) => LoginScreen()));
                 },
                 child: Container(
                   width: 400,
