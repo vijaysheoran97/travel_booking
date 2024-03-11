@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
+import 'package:travel_booking/travel_booking/ui/widget/navigation_bar.dart';
 import 'package:travel_booking/travel_booking/ui/widget/otp_text_fild.dart';
 
 class OTPScreen extends StatefulWidget {
@@ -54,7 +55,7 @@ class _OTPScreenState extends State<OTPScreen> {
                 alignment: Alignment.bottomCenter,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OTPScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
                   },
                   child: Container(
                     width: 400,
