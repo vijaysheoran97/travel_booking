@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: AppColorConstant.appSeedColor),
         useMaterial3: true,
       ),
-      darkTheme: ThemeData.dark().copyWith(),
+      //darkTheme: ThemeData.dark().copyWith(),
+
       themeMode: ThemeMode.system,
       home: WelcomeScreen(),
     );
