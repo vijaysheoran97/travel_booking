@@ -16,7 +16,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     bool _obscurePassword = true;
     final Size screenSize = MediaQuery.of(context).size;
-    return Scaffold(appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
       title: Text('Sign Up',
         style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
     ),

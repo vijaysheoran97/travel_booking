@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/travel_booking/ui/screens/forget_screen.dart';
 import 'package:travel_booking/travel_booking/ui/screens/register_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
+import 'package:travel_booking/travel_booking/ui/widget/navigation_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -50,12 +52,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: screenSize.width,
                 color: AppColorConstant.appScendoryColor,
                 child: Column(
-                  children: [SizedBox(height: screenSize.height * 0.03,),
+                  children: [
+                    SizedBox(
+                      height: screenSize.height * 0.03,
+                    ),
                     Text(
                       'Hi, Welcome Back!',
-                      style: TextStyle(color: AppColorConstant.appTextColor,
-                          fontSize: 26,fontWeight: FontWeight.w500
-                      ),
+                      style: TextStyle(
+                          color: AppColorConstant.appTextColor,
+                          fontSize: 26,
+                          fontWeight: FontWeight.w500),
                     ),
                   ],
                 )),
@@ -83,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: AppColorConstant.appTextColorblack54),
                         ),
                         SizedBox(
-                          height:  screenSize.height * 0.01,
+                          height: screenSize.height * 0.01,
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -103,13 +109,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         SizedBox(
-                          height:  screenSize.height * 0.05,
+                          height: screenSize.height * 0.05,
                         ),
                         Align(
                           alignment: Alignment.bottomCenter,
                           child: GestureDetector(
                             onTap: () {
-                              // Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
+                               Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
                             },
                             child: Container(
                               width: 400,
@@ -143,7 +149,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left: 12, right: 12),
+                              padding:
+                                  const EdgeInsets.only(left: 12, right: 12),
                               child: Text(
                                 "Or continue with",
                                 style: TextStyle(
@@ -199,7 +206,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         SizedBox(
-                          height:  screenSize.height * 0.02,
+                          height: screenSize.height * 0.02,
                         ),
                         Material(
                           child: Container(
@@ -236,16 +243,42 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         SizedBox(
+                          height: screenSize.height * 0.01,
+                        ),
+                        Row(
+                          children: [Spacer(),
+                            GestureDetector(
+                              onTap: (){
+Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetScreen()));
+                              },
+                                child: Text(
+                              "Forget Password?",
+                              style: TextStyle(
+                                  color: AppColorConstant.appScendoryColor),
+                            )),
+                          ],
+                        ),
+                        SizedBox(
                           height: screenSize.height * 0.03,
                         ),
-                        Row(crossAxisAlignment: CrossAxisAlignment.center,
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Don't have an account?"),
-                            TextButton(onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=> RegisterScreen()));
-                            },
-                            child: Text("Sign Up",style: TextStyle(color: AppColorConstant.appScendoryColor),)),
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              RegisterScreen()));
+                                },
+                                child: Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                      color: AppColorConstant.appScendoryColor),
+                                )),
                           ],
                         ),
                       ],
@@ -255,7 +288,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             )
           ],
-        )
-    );
+        ));
   }
 }
