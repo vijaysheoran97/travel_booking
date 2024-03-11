@@ -21,6 +21,9 @@ class AppStringConstant{
   static const String security = 'Security';
   static const String language = 'Language';
   static const String vacation = 'Vacation Detail';
+  static const String tajMahal = 'Taj Mahal';
+  static const String uttarPradesh = 'Uttar Pradesh';
+  static const String details = 'Details';
   static const String notification = 'Notification';
   static const String switchTo = 'Switch To Dark Mode';
   static const String frequentlyVisited = 'Frequently visited';

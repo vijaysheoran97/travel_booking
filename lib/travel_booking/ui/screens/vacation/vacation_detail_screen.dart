@@ -20,9 +20,10 @@ class _VacationDetailScreenState extends State<VacationDetailScreen> {
     return MaterialApp(
         theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
         home: Scaffold(
-          body: Column(children: [
+          body: Stack(
+              children: [
             Container(
-              height: screenHeight * 0.25,
+              height: screenHeight * 0.50,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(AppStringConstant.image1Path),
@@ -38,13 +39,15 @@ class _VacationDetailScreenState extends State<VacationDetailScreen> {
                 icon: const Icon(Icons.arrow_back,
                     color: AppColorConstant.appTextColor),
               ),
-             
-              title: const Text(
-                AppStringConstant.vacation,
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              title: const Padding(
+                padding: EdgeInsets.only(top: 12),
+                child: Text(
+                  AppStringConstant.vacation,
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+
+                  ),
                 ),
               ),
               centerTitle: true,
@@ -65,6 +68,23 @@ class _VacationDetailScreenState extends State<VacationDetailScreen> {
                   ),
                 ),
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 300),
+              child: const Text(
+                AppStringConstant.tajMahal,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
+              ),
+            ),
+            const Text(
+              AppStringConstant.uttarPradesh,
+              style: TextStyle(color: AppColorConstant.appText2Color),
+            ),
+            const Text(
+              AppStringConstant.details,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ]),
         ));

@@ -6,10 +6,10 @@ class LikableImage extends StatefulWidget {
   const LikableImage({super.key, required this.imagePath});
 
   @override
-  _LikableImageState createState() => _LikableImageState();
+  LikableImageState createState() => LikableImageState();
 }
 
-class _LikableImageState extends State<LikableImage> {
+class LikableImageState extends State<LikableImage> {
   bool isLiked = false;
 
   @override

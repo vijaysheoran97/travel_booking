@@ -15,33 +15,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool isDarkMode = false;
   bool isLiked = false;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           iconTheme: const IconThemeData(
             color: AppColorConstant.appTextColor,
           ),
           backgroundColor: AppColorConstant.appScendoryColor,
           actions: [
-            IconButton(
-              onPressed: () {
-                setState(() {
-                  isDarkMode = !isDarkMode;
-                });
-              },
-              icon: Icon(
-                isDarkMode
-                    ? Icons.light_mode_outlined
-                    : Icons.dark_mode_outlined,
-                color: AppColorConstant.appTextColor,
-              ),
-            ),
             IconButton(
               onPressed: () {},
               icon: const Icon(
@@ -95,9 +79,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: Text(
                   AppStringConstant.menu,
                   style: TextStyle(
-                    color: isDarkMode
-                        ? AppColorConstant.appTextColor
-                        : AppColorConstant.appTextColorblack,
                     fontWeight: FontWeight.w600,
                     fontSize: MediaQuery.of(context).size.width * 0.04,
                   ),
@@ -146,9 +127,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: Text(
                   AppStringConstant.others,
                   style: TextStyle(
-                    color: isDarkMode
-                        ? AppColorConstant.appTextColor
-                        : AppColorConstant.appTextColorblack,
                     fontWeight: FontWeight.w600,
                     fontSize: MediaQuery.of(context).size.width * 0.04,
                   ),
@@ -212,24 +190,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: AppColorConstant.appTextColor,
                   ),
                 ),
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(AppStringConstant.switchTo),
-                    Container(
-                      height: 20,
-                      width: 32,
-                      child: Switch(
-                        value: isDarkMode,
-                        onChanged: (value) {
-                          setState(() {
-                            isDarkMode = value;
-                          });
-                        },
-                      ),
-                    ),
-                  ],
-                ),
               ),
               const Divider(),
             ],
@@ -259,12 +219,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(
                         width: 16,
                       ),
-                      Text(
+                      const Text(
                         AppStringConstant.hiAndyNetherlands,
                         style: TextStyle(
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                             fontWeight: FontWeight.w600),
                       ),
                       const SizedBox(
@@ -274,9 +231,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                             width: 2.0, // Border width
                           ),
                         ),
@@ -284,11 +238,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 42,
                         child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.notification_add_outlined,
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                           ),
                         ),
                       ),
@@ -299,9 +250,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                             width: 2.0, // Border width
                           ),
                         ),
@@ -309,11 +257,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 42,
                         child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.message,
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                           ),
                         ),
                       ),
@@ -325,11 +270,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       hintText: AppStringConstant.searchHint,
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.search,
-                        color: isDarkMode
-                            ? AppColorConstant.appTextColor
-                            : AppColorConstant.appTextColorblack,
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
@@ -347,21 +289,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(
-                          color: isDarkMode
-                              ? AppColorConstant.appTextColor
-                              : AppColorConstant.appTextColorblack,
-                          width: 2.0, // Border width
+                          width: 2.0,
                         ),
                       ),
                       height: 42,
                       width: 42,
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.sailing,
-                          color: isDarkMode
-                              ? AppColorConstant.appTextColor
-                              : AppColorConstant.appTextColorblack,
                         ),
                       ),
                     ),
@@ -369,21 +305,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(
-                          color: isDarkMode
-                              ? AppColorConstant.appTextColor
-                              : AppColorConstant.appTextColorblack,
-                          width: 2.0, // Border width
+                          width: 2.0,
                         ),
                       ),
                       height: 42,
                       width: 42,
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.car_crash_outlined,
-                          color: isDarkMode
-                              ? AppColorConstant.appTextColor
-                              : AppColorConstant.appTextColorblack,
                         ),
                       ),
                     ),
@@ -391,9 +321,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         border: Border.all(
-                          color: isDarkMode
-                              ? AppColorConstant.appTextColor
-                              : AppColorConstant.appTextColorblack,
                           width: 2.0, // Border width
                         ),
                       ),
@@ -401,11 +328,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 42,
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.settings_input_component,
-                          color: isDarkMode
-                              ? AppColorConstant.appTextColor
-                              : AppColorConstant.appTextColorblack,
                         ),
                       ),
                     ),
@@ -420,27 +344,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           AppStringConstant.airport,
                           style: TextStyle(
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                             fontSize: MediaQuery.of(context).size.width * 0.03,
                           ),
                         ),
                         Text(
                           AppStringConstant.rental,
                           style: TextStyle(
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                             fontSize: MediaQuery.of(context).size.width * 0.03,
                           ),
                         ),
                         Text(
                           AppStringConstant.more,
                           style: TextStyle(
-                            color: isDarkMode
-                                ? AppColorConstant.appTextColor
-                                : AppColorConstant.appTextColorblack,
                             fontSize: MediaQuery.of(context).size.width * 0.03,
                           ),
                         ),
@@ -454,9 +369,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   AppStringConstant.frequentlyVisited,
                   style: TextStyle(
-                    color: isDarkMode
-                        ? AppColorConstant.appTextColor
-                        : AppColorConstant.appTextColorblack,
                     fontWeight: FontWeight.bold,
                     fontSize: MediaQuery.of(context).size.width * 0.04,
                   ),
@@ -559,7 +471,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

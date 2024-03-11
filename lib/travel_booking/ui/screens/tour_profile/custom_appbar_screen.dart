@@ -3,15 +3,11 @@ import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_string_constent.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final bool isDarkMode;
   final VoidCallback onBackButtonPressed;
-  final VoidCallback onToggleDarkMode;
 
   const CustomAppBar({
     Key? key,
-    required this.isDarkMode,
     required this.onBackButtonPressed,
-    required this.onToggleDarkMode,
   }) : super(key: key);
 
   @override
@@ -47,15 +43,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
-      actions: [
-        IconButton(
-          onPressed: onToggleDarkMode,
-          icon: Icon(
-            isDarkMode ? Icons.light_mode_outlined : Icons.dark_mode_outlined,
-            color: AppColorConstant.appTextColor,
-          ),
-        ),
-      ],
     );
   }
 }

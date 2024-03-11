@@ -11,16 +11,13 @@ class TourProfileScreen extends StatefulWidget {
 }
 
 class _TourProfileScreenState extends State<TourProfileScreen> {
-  bool isDarkMode = false;
 
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return MaterialApp(
-      theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-      home: Scaffold(
+    return Scaffold(
         body: Stack(
           children: [
             Container(
@@ -33,15 +30,10 @@ class _TourProfileScreenState extends State<TourProfileScreen> {
               ),
             ),
             CustomAppBar(
-              isDarkMode: isDarkMode,
               onBackButtonPressed: () {
                 Navigator.pop(context);
               },
-              onToggleDarkMode: () {
-                setState(() {
-                  isDarkMode = !isDarkMode;
-                });
-              },
+
             ),
             Positioned(
               top: screenHeight * 0.3,
@@ -87,7 +79,6 @@ class _TourProfileScreenState extends State<TourProfileScreen> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
