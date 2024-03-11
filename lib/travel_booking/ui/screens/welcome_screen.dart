@@ -13,9 +13,8 @@ class WelcomeScreen extends StatelessWidget {
       drawer: Drawer(
         child: Container(
           color: AppColorConstant.appScendoryColor,
-          child: Column(
+          child: const Column(
             children: [
-              // Add your drawer items here
             ],
           ),
         ),
@@ -55,7 +54,8 @@ class WelcomeScreen extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => LoginScreen()));
+                          builder: (context) => const BottomNavigation()));
+
                 },
                 child: Container(
                   width: 400,
@@ -64,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                     color: AppColorConstant.appScendoryColor,
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Get Started",
                       style: TextStyle(
@@ -77,22 +77,22 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?"),
+                const Text("Don't have an account?"),
                 TextButton(
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RegisterScreen()));
+                              builder: (context) => const RegisterScreen()));
                     },
-                    child: Text(
+                    child: const Text(
                       "Register",
                       style:
                           TextStyle(color: AppColorConstant.appScendoryColor),

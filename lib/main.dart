@@ -9,15 +9,19 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: AppStringConstant.appTitle,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColorConstant.appSeedColor),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: AppColorConstant.appSeedColor),
         useMaterial3: true,
       ),
-      home:  WelcomeScreen(),
+      darkTheme: ThemeData.dark().copyWith(),
+      themeMode: ThemeMode.system,
+      home: WelcomeScreen(),
     );
   }
 }
