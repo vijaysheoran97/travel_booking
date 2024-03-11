@@ -11,51 +11,23 @@ class ComponentsScreen extends StatefulWidget {
 }
 
 class _ComponentsScreenState extends State<ComponentsScreen> {
-  bool isDarkMode = false;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-        home: Scaffold(
+    return Scaffold(
           appBar: AppBar(
             backgroundColor: AppColorConstant.appScendoryColor,
             leading: IconButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back,
-                color: isDarkMode
-                    ? AppColorConstant.appTextColor
-                    : AppColorConstant.appTextColorblack,
               ),
             ),
-            title: Text(
+            title: const Text(
               AppStringConstant.components,
-              style: TextStyle(
-                color: isDarkMode
-                    ? AppColorConstant.appTextColor
-                    : AppColorConstant.appTextColorblack,
-              ),
             ),
-            actions: [
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    isDarkMode = !isDarkMode;
-                  });
-                },
-                icon: Icon(
-                  isDarkMode
-                      ? Icons.light_mode_outlined
-                      : Icons.dark_mode_outlined,
-                  color: isDarkMode
-                      ? AppColorConstant.appTextColor
-                      : AppColorConstant.appTextColorblack,
-                ),
-              ),
-            ],
           ),
           body: Column(
             children: [
@@ -67,11 +39,8 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
                   ),
                   height: 35,
                   width: 35,
-                  child: Icon(
+                  child: const Icon(
                     Icons.square_outlined,
-                    color: isDarkMode
-                        ? AppColorConstant.appTextColor
-                        : AppColorConstant.appTextColorblack,
                   ),
                 ),
                 title: const Text(AppStringConstant.splashScreen),
@@ -84,6 +53,6 @@ class _ComponentsScreenState extends State<ComponentsScreen> {
               const Divider(),
             ],
           ),
-        ));
+        );
   }
 }

@@ -10,16 +10,13 @@ class VacationDetailScreen extends StatefulWidget {
 }
 
 class _VacationDetailScreenState extends State<VacationDetailScreen> {
-  bool isDarkMode = false;
 
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return MaterialApp(
-        theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-        home: Scaffold(
+    return  Scaffold(
           body: Stack(
               children: [
             Container(
@@ -53,25 +50,10 @@ class _VacationDetailScreenState extends State<VacationDetailScreen> {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0,
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isDarkMode = !isDarkMode;
-                    });
-                  },
-                  icon: Icon(
-                    isDarkMode
-                        ? Icons.light_mode_outlined
-                        : Icons.dark_mode_outlined,
-                    color: AppColorConstant.appTextColor,
-                  ),
-                ),
-              ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 300),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(top: 300),
+              child: Text(
                 AppStringConstant.tajMahal,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
               ),
@@ -87,6 +69,6 @@ class _VacationDetailScreenState extends State<VacationDetailScreen> {
               ),
             ),
           ]),
-        ));
+        );
   }
 }
