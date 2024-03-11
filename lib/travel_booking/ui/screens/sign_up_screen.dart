@@ -140,6 +140,34 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: screenSize.height * 0.03,
               ),
               Text(
+                'Address',
+                style: TextStyle(
+                    color: AppColorConstant.appTextColorblack54),
+              ),
+              SizedBox(
+                height: screenSize.height * 0.01,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.black.withOpacity(0.09),
+                  hintText: 'Enter your full address',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    // Adjust the vertical padding as needed
+                    horizontal:
+                    15.0, // Adjust the horizontal padding as needed
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: screenSize.height * 0.03,
+              ),
+              Text(
                 'Password',
                 style: TextStyle(
                     color: AppColorConstant.appTextColorblack54),
