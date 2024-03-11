@@ -83,7 +83,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Email',
+                          'PhoneNo',
                           style: TextStyle(
                               color: AppColorConstant.appTextColorblack54),
                         ),
@@ -94,7 +94,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.black.withOpacity(0.09),
-                            hintText: 'Enter your email address',
+                            hintText: 'Enter your phone number',
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(15),
                               borderSide: BorderSide.none,
@@ -125,7 +125,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                               child: Center(
                                 child: Text(
-                                  "Continue with Email",
+                                  "Continue with PhoneNo",
                                   style: TextStyle(
                                     color: AppColorConstant.appTextColor,
                                     fontSize: 18,
@@ -224,13 +224,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               icon: Padding(
                                 padding: const EdgeInsets.all(6.0),
                                 child: Image.asset(
-                                  'assets/images/apple1.png',
+                                  'assets/images/gmail1.png',
                                   width: screenSize.width * 0.1,
                                   height: screenSize.height,
                                 ),
                               ),
                               label: const Text(
-                                "Continue with Apple",
+                                "Continue with Email",
                                 style: TextStyle(
                                     color: AppColorConstant.appTextColorblack54,
                                     fontSize: 16),
