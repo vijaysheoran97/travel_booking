@@ -10,13 +10,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  bool isDarkMode = false;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-        home: Scaffold(
+    return Scaffold(
           backgroundColor: AppColorConstant.appScendoryColor,
           appBar: AppBar(
             backgroundColor: AppColorConstant.appScendoryColor,
@@ -24,46 +21,19 @@ class _SplashScreenState extends State<SplashScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back,
-                color: isDarkMode
-                    ? AppColorConstant.appTextColor
-                    : AppColorConstant.appTextColorblack,
               ),
             ),
-            title: Text(
+            title: const Text(
               AppStringConstant.splashScreen,
-              style: TextStyle(
-                color: isDarkMode
-                    ? AppColorConstant.appTextColor
-                    : AppColorConstant.appTextColorblack,
-              ),
             ),
-            actions: [
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    isDarkMode = !isDarkMode;
-                  });
-                },
-                icon: Icon(
-                  isDarkMode
-                      ? Icons.light_mode_outlined
-                      : Icons.dark_mode_outlined,
-                  color: isDarkMode
-                      ? AppColorConstant.appTextColor
-                      : AppColorConstant.appTextColorblack,
-                ),
-              ),
-            ],
           ),
-          body: Center(
+          body: const Center(
               child: Icon(
-            Icons.spa_outlined,color: isDarkMode
-                  ? AppColorConstant.appTextColor
-                  : AppColorConstant.appTextColorblack,
+            Icons.spa_outlined,
             size: 200,
           )),
-        ));
+        );
   }
 }
