@@ -19,7 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+
         appBar: AppBar(
           iconTheme: const IconThemeData(
             color: AppColorConstant.appTextColor,
@@ -472,5 +474,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       );
+
   }
 }
