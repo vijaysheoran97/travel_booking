@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_booking/travel_booking/ui/screens/register_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/widget/otp_text_fild.dart';
 
