@@ -13,7 +13,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
       home: Scaffold(
@@ -46,25 +45,26 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         drawer: Drawer(
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(0),
-              bottomRight: Radius.circular(0),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(0),
+                bottomRight: Radius.circular(0),
 
+              ),
             ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.person_outline,
-              color: AppColorConstant.appTextColor,
-            ),
-          ),
-        ],
-      ),
-      body: Column(
-        children: [],
+            // IconButton(
+            //   onPressed: () {},
+            //   icon: const Icon(
+            //     Icons.person_outline,
+            //     color: AppColorConstant.appTextColor,
+            //   ),
+            // ),
+            // ]
+        ),
+        body: Column(
+            children: []
 
+        ),
       ),
     );
   }
