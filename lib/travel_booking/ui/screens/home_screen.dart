@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_booking/travel_booking/ui/drawer/components_screen.dart';
 import 'package:travel_booking/travel_booking/ui/drawer/setting_screen.dart';
 import 'package:travel_booking/travel_booking/ui/screens/tour_profile/tour_profile_screen.dart';
+import 'package:travel_booking/travel_booking/ui/screens/vacation/vacation_detail_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_string_constent.dart';
 import 'package:travel_booking/travel_booking/ui/widget/likeable_image.dart';
@@ -463,13 +464,23 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 16,
                 ),
-                 const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    LikableImage(imagePath: AppStringConstant.image1Path),
-                    LikableImage(imagePath: AppStringConstant.image2Path),
-                  ],
-                ),
+                 GestureDetector(
+                   onTap: () {
+                     Navigator.push(
+                       context,
+                       MaterialPageRoute(
+                         builder: (context) => const VacationDetailScreen(),
+                       ),
+                     );
+                   },
+                   child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      LikableImage(imagePath: AppStringConstant.image1Path),
+                      LikableImage(imagePath: AppStringConstant.image2Path),
+                    ],
+                                   ),
+                 ),
                 const SizedBox(
                   height: 16,
                 ),
