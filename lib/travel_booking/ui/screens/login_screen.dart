@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_booking/travel_booking/ui/screens/register_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
+import 'package:travel_booking/travel_booking/ui/widget/navigation_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -109,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           alignment: Alignment.bottomCenter,
                           child: GestureDetector(
                             onTap: () {
-                              // Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
+                               Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavigation()));
                             },
                             child: Container(
                               width: 400,
