@@ -1,6 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/change_Password.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/help_support.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/language.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/legal_policies.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/my_Address.dart';
 import 'package:travel_booking/travel_booking/ui/screens/profile_screens/my_Profile.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/my_payment.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/notification.dart';
+import 'package:travel_booking/travel_booking/ui/screens/profile_screens/security.dart';
 
 import '../utils/app_color_constent.dart';
 
@@ -88,7 +96,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
-              const ListTile(
+              ListTile(
+                onTap: () {
+                  Navigator.push(context, CupertinoPageRoute(builder: (context) => const MyAddressPage()));
+                },
+
                 leading: Icon(Icons.location_on_outlined),
                 title: Text(
                   'My Address',
@@ -100,7 +112,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
-              const ListTile(
+
+              ListTile(
+                onTap: () {
+                  Navigator.push(context, CupertinoPageRoute(builder: (context) => const PaymentPage()));
+                },
+
                 leading: Icon(Icons.account_balance_wallet_outlined),
                 title: Text(
                   'Payment Method',
@@ -119,7 +136,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
-              const ListTile(
+
+              ListTile(
+                onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const ChangePasswordPage()));},
+
                 leading: Icon(Icons.lock_outline),
                 title: Text(
                   'Change Password',
@@ -143,7 +163,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
-              const ListTile(
+
+              ListTile(
+                onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const SecurityPage()));},
+
                 leading: Icon(Icons.security_outlined),
                 title: Text(
                   'Security',
@@ -155,7 +178,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
-              const ListTile(
+
+              ListTile(
+                onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const NotificationPage()));},
+
                 leading: Icon(Icons.notifications_outlined),
                 title: Text(
                   'Notifications',
@@ -174,8 +200,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
-              const ListTile(
+
+              ListTile(
                 leading: Icon(Icons.language_outlined),
+                onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const LanguagePage()));},
+
                 title: Text(
                   'Language',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
@@ -203,7 +232,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
-              const ListTile(
+
+              ListTile(
+                onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const LegalAndPoliciesPage()));},
+
                 leading: Icon(Icons.privacy_tip_outlined),
                 title: Text(
                   'Legal and Policies',
@@ -215,7 +247,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
-              const ListTile(
+
+              ListTile(
+                onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const HelpAndSupportPage()));},
+
                 leading: Icon(Icons.privacy_tip_outlined),
                 title: Text(
                   'Help & Support',
@@ -234,7 +269,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
                 trailing: Transform.scale(
-                  scale: 0.7,
+
+                  scale: 0.9,
+
                   child: Switch(
                     value: isDarkModeEnabled,
                     onChanged: (value) {
@@ -243,6 +280,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         // Add code to handle dark mode switch here
                       });
                     },
+
+                    thumbColor: MaterialStateProperty.all(AppColorConstant.appTextColor),
+                    trackColor: MaterialStateProperty.all(AppColorConstant.appScendoryColor),
+                    trackOutlineColor: MaterialStateProperty.all(AppColorConstant.appScendoryColor),
+
                   ),
                 ),
               ),

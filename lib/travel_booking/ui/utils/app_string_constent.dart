@@ -1,3 +1,16 @@
+
+class AppStringConstant {
+  static String appTitle = 'Travel Booking Pro';
+  static String appLegalText = '''
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ornare quam vel facilisis feugiat amet sagittis arcu, tortor. Sapien, 
+    consequat ultrices morbi orci semper sit nulla. Leo auctor ut etiam est, amet aliquet ut vivamus. Odio vulputate est id tincidunt fames.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ornare quam vel facilisis feugiat amet sagittis arcu, tortor. Sapien, 
+consequat ultrices morbi orci semper sit nulla. Leo auctor ut etiam est, amet aliquet ut vivamus. Odio vulputate est id tincidunt fames.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ornare quam vel facilisis feugiat amet sagittis arcu, tortor. Sapien, 
+consequat ultrices morbi orci semper sit nulla. Leo auctor ut etiam est, amet aliquet ut vivamus. Odio vulputate est id tincidunt fames.
+  ''';
+}
+
 class AppStringConstant{
   static String appTitle ='Travel Booking Pro';
   static const String hiAndyNetherlands = 'Hi, Andy\nNetherlands';
@@ -50,3 +63,4 @@ class AppStringConstant{
   static const String image3Path = 'assets/images/pexels-ketut-subiyanto-4473405.jpg';
   static const String image4Path = 'assets/images/pexels-pranav-digwal-32976.jpg';
   }
+
