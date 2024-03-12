@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_booking/travel_booking/ui/drawer/components_screen.dart';
-import 'package:travel_booking/travel_booking/ui/drawer/setting_screen.dart';
+import 'package:travel_booking/travel_booking/ui/setting/setting_screen.dart';
 import 'package:travel_booking/travel_booking/ui/screens/tour_profile/tour_profile_screen.dart';
 import 'package:travel_booking/travel_booking/ui/screens/vacation/vacation_detail_screen.dart';
 import 'package:travel_booking/travel_booking/ui/utils/app_color_constent.dart';
@@ -329,7 +329,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 42,
                       width: 42,
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _showBottomSheet(context);
+                        },
                         icon: const Icon(
                           Icons.settings_input_component,
                         ),
@@ -476,4 +478,99 @@ class _HomeScreenState extends State<HomeScreen> {
       );
 
   }
+  void _showBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  children: [
+                    Icon(Icons.close),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width*0.3,
+                    ),
+                    Text("All Services")
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height*0.05,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.flight),),
+                      Text("Airport"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.local_taxi),),
+                      Text("Taxi"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.train),),
+                      Text("Train"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.directions_bike),),
+                      Text("Bike"),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height*0.07,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.sailing),),
+                      Text("Ship"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.electric_rickshaw),),
+                      Text("Auto"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.train),),
+                      Text("Train"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      IconButton(onPressed: (){},icon: Icon(Icons.directions_bike),),
+                      Text("Bike"),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height*0.07,
+              ),
+
+            ],
+          ),
+        );
+      },
+    );
+  }
 }
+
