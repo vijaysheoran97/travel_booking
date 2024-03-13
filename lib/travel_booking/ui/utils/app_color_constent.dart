@@ -10,6 +10,7 @@ class AppColorConstant {
   static const appText2Color = Colors.grey;
   static const appElevatedButtonColor = Colors.blue;
   static const appTextColorblack = Colors.black;
+  static const appTextColorblacks = Colors.black12;
   static const appTextColorblack87 = Colors.black87;
   static const appTextColorblack54 = Colors.black54;
   static const appArowbackColor = Color(0xFF333333);
