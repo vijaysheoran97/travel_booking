@@ -31,8 +31,10 @@ class _NotificationPageState extends State<NotificationPage> {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Container(
-          height: screenHeight * 0.4, // Set container height based on screen height
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+
+          height: screenHeight * 0.5,
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+
           decoration: BoxDecoration(
             border: Border.all(color: AppColorConstant.appText2Color.shade300),
             borderRadius: BorderRadius.circular(10.0),

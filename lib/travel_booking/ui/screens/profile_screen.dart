@@ -163,7 +163,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
-
               ListTile(
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const SecurityPage()));},
 

@@ -16,6 +16,10 @@ class _MyAddressPageState extends State<MyAddressPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -46,109 +50,13 @@ class _MyAddressPageState extends State<MyAddressPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-        child: Column(
-          children: [
-            ListTile(
-              title: const Text(
-                'Andy Andrew',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-              ),
-              subtitle: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    '+1234567890',
-                    style: TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
-                  ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    '1234 Your Road No #6789',
-                    style: TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
-                  ),
-                  const Text(
-                    'Your City, Country',
-                    style: TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
-                  ),
-                  const SizedBox(height: 10),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    height: 35.0,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: AppColorConstant.appScendoryColor),
-                      ),
-                      child: const Text(
-                        'Change Address',
-                        style: TextStyle(color: AppColorConstant.appScendoryColor, fontSize: 15, letterSpacing: 0.5),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              trailing: Radio(
-                value: 1,
-                groupValue: selectedTile,
-                onChanged: (value) {
-                  setState(() {
-                    selectedTile = value as int;
-                  });
-                },
-                activeColor: AppColorConstant.appScendoryColor, // Set the color of the selected Radio button
-              ),
-            ),
 
-            ListTile(
-              title: const Text(
-                'Elevenia Kalia',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-              ),
-              subtitle: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    '+1234567890',
-                    style: TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
-                  ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    '1234 Your Road No #6789',
-                    style: TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
-                  ),
-                  const Text(
-                    'Your City, Country',
-                    style: TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
-                  ),
-                  const SizedBox(height: 10),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    height: 35.0,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: AppColorConstant.appScendoryColor),
-                      ),
-                      child: const Text(
-                        'Change Address',
-                        style: TextStyle(color: AppColorConstant.appScendoryColor, fontSize: 15, letterSpacing: 0.5),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              trailing: Radio(
-                value: 2,
-                groupValue: selectedTile,
-                onChanged: (value) {
-                  setState(() {
-                    selectedTile = value as int;
-                  });
-                },
-                activeColor: AppColorConstant.appScendoryColor, // Set the color of the selected Radio button
-              ),
-            ),
+        child: ListView(
+          children: [
+            buildAddressTile('Andy Andrew', '+1234567890', '1234 Your Road No #6789', 'Your City, Country', 1),
+            buildAddressTile('Elevenia Kalia', '+1234567890', '1234 Your Road No #6789', 'Your City, Country', 2),
+            // Add more addresses as needed
+
           ],
         ),
       ),
@@ -175,4 +83,57 @@ class _MyAddressPageState extends State<MyAddressPage> {
       ),
     );
   }
+
+
+  Widget buildAddressTile(String title, String phone, String addressLine1, String addressLine2, int value) {
+    return ListTile(
+      title: Text(
+        title,
+        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+      ),
+      subtitle: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            phone,
+            style: const TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
+          ),
+          const SizedBox(height: 5),
+          Text(
+            addressLine1,
+            style: const TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
+          ),
+          Text(
+            addressLine2,
+            style: const TextStyle(fontSize: 16, color: AppColorConstant.appText2Color),
+          ),
+          const SizedBox(height: 10),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              side: const BorderSide(color: AppColorConstant.appScendoryColor),
+            ),
+            child: const Text(
+              'Change Address',
+              style: TextStyle(color: AppColorConstant.appScendoryColor, fontSize: 15, letterSpacing: 0.5),
+            ),
+          ),
+        ],
+      ),
+      trailing: Radio(
+        value: value,
+        groupValue: selectedTile,
+        onChanged: (int? newValue) {
+          if (newValue != null) {
+            setState(() {
+              selectedTile = newValue;
+            });
+          }
+        },
+        activeColor: AppColorConstant.appScendoryColor, // Set the color of the selected Radio button
+      ),
+    );
+  }
+
 }

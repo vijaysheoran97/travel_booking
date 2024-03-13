@@ -31,8 +31,10 @@ class _SecurityPageState extends State<SecurityPage> {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Container(
-          height: screenHeight * 0.3, // Set container height based on screen height
-          padding: EdgeInsets.all(10),
+
+          height: screenHeight * 0.45,
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+
           decoration: BoxDecoration(
             border: Border.all(color: AppColorConstant.appText2Color.shade300),
             borderRadius: BorderRadius.circular(10.0),
