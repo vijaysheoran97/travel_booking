@@ -56,14 +56,15 @@ class AppStringConstant{
   static const String totalPay = 'Total Pay';
   static const String promoCode = 'Promo Code';
   static const String inputCode = 'Input Code';
+  static const String myWishlist = 'My Wishlist';
   static const String bookNow = 'Book Now';
   static const String lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
   static const String about = 'Lorem ipsum dolor sit amet,consecrate '
       'adipicing elite.Tortor ac leoo lorem nisl.Viverra vulputate sodales '
       'quis,et dui,lacus.laculis eu egestas vel.';
-  static const String tahitiBeach = 'Tahiti Beach\n235';
+  static const String tahitiBeach = 'Tahiti Beach\nPolynesia,French\n235';
   static const String dateVisit = 'Date Visit';
-  static const String stLuciaMountain = 'St.Lucia Mountain\n235';
+  static const String stLuciaMountain = 'St.Lucia Mountain\nSouth America\n235';
   static const String emiliaRicardo = 'Emilia Ricardo\n25';
   static const String jonskyAlexia = 'Jonsky Alexia\n30';
   static const String jonskyAlexias = 'Jonsky Alexia';
