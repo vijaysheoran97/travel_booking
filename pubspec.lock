@@ -132,8 +132,6 @@ packages:
     source: hosted
 
     version: "1.11.0"
-
-    version: "1.10.0"
   nested:
     dependency: transitive
     description:
@@ -157,7 +155,6 @@ packages:
 
     version: "1.9.0"
 
-    version: "1.8.3"
   provider:
     dependency: "direct main"
     description:

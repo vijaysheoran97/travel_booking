@@ -24,168 +24,199 @@ class _LanguagePageState extends State<LanguagePage> {
         leading: const BackButton(
           color: AppColorConstant.appArowbackColor,
         ),
-        title: const Text('Language', style: TextStyle(fontWeight: FontWeight.w700)),
+        title: const Text(
+            'Language', style: TextStyle(fontWeight: FontWeight.w700)),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
           child: Column(
-            children: [
+              children: [
 
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
-                decoration: BoxDecoration(
-                  border: Border.all(color: AppColorConstant.appText2Color.shade300),
-                  borderRadius: BorderRadius.circular(10.0),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10, vertical: 30),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: AppColorConstant.appText2Color.shade300),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Suggested Languages', style: TextStyle(
+                          color: AppColorConstant.appText2Color),),
+                      const SizedBox(height: 10,),
+                      ListTile(
+                        title: const Text('English (UK)', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'English (UK)',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
+                      ),
+                      Divider(
+                        color: AppColorConstant.appText2Color.shade300,
+                        thickness: 0.5,
+                      ),
+                      ListTile(
+                        title: const Text('English', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'English',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
+                      ),
+                      Divider(
+                        color: AppColorConstant.appText2Color.shade300,
+                        thickness: 0.5,
+                      ),
+                      ListTile(
+                        title: const Text('Bahasa Indonesia', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'Bahasa',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text('Suggested Languages', style: TextStyle(color: AppColorConstant.appText2Color),),
-                    const SizedBox(height: 10,),
-                    ListTile(
-                      title: const Text('English (UK)', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'English (UK)',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                const SizedBox(height: 30,),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 10, vertical: 30),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: AppColorConstant.appText2Color.shade300),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Other Languages', style: TextStyle(
+                          color: AppColorConstant.appText2Color),),
+                      const SizedBox(height: 10,),
+                      ListTile(
+                        title: const Text('Chineses', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'Chineses',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
                       ),
-                    ),
-                    Divider(
-                      color: AppColorConstant.appText2Color.shade300,
-                      thickness: 0.5,
-                    ),
-                    ListTile(
-                      title: const Text('English', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'English',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      Divider(
+                        color: AppColorConstant.appText2Color.shade300,
+                        thickness: 0.5,
                       ),
-                    ),
-                    Divider(
-                      color: AppColorConstant.appText2Color.shade300,
-                      thickness: 0.5,
-                    ),
-                    ListTile(
-                      title: const Text('Bahasa Indonesia', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Bahasa',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      ListTile(
+                        title: const Text('Croatian', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'Croatian',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-          const SizedBox(height: 30,),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
-                decoration: BoxDecoration(
-                  border: Border.all(color: AppColorConstant.appText2Color.shade300),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text('Other Languages', style: TextStyle(color: AppColorConstant.appText2Color),),
-                    const SizedBox(height: 10,),
-                    ListTile(
-                      title: const Text('Chineses', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Chineses',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      Divider(
+                        color: AppColorConstant.appText2Color.shade300,
+                        thickness: 0.5,
                       ),
-                    ),
-                    Divider(
-                      color: AppColorConstant.appText2Color.shade300,
-                      thickness: 0.5,
-                    ),
-                    ListTile(
-                      title: const Text('Croatian', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Croatian',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      ListTile(
+                        title: const Text('Czech', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'Czech',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
                       ),
-                    ),
-                    Divider(
-                      color: AppColorConstant.appText2Color.shade300,
-                      thickness: 0.5,
-                    ),
-                    ListTile(
-                      title: const Text('Czech', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Czech',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      Divider(
+                        color: AppColorConstant.appText2Color.shade300,
+                        thickness: 0.5,
                       ),
-                    ),
-                    Divider(
-                      color: AppColorConstant.appText2Color.shade300,
-                      thickness: 0.5,
-                    ),
-                    ListTile(
-                      title: const Text('Danish', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Danish',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      ListTile(
+                        title: const Text('Danish', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'Danish',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
                       ),
-                    ),
-                    Divider(
-                      color: AppColorConstant.appText2Color.shade300,
-                      thickness: 0.5,
-                    ),
-                    ListTile(
-                      title: const Text('Filipino', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Filipino',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
+                      Divider(
+                        color: AppColorConstant.appText2Color.shade300,
+                        thickness: 0.5,
                       ),
-                    ),
+                      ListTile(
+                        title: const Text('Filipino', style: TextStyle(
+                            color: AppColorConstant.appTextColorblack,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),),
+                        trailing: Radio(
+                          value: 'Filipino',
+                          groupValue: selectedLanguage,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value.toString();
+                            });
+                          },
+                          activeColor: AppColorConstant.appScendoryColor,
+                        ),
+                      ),
 
 
               _buildLanguageContainer('Suggested Languages', [
@@ -205,12 +236,19 @@ class _LanguagePageState extends State<LanguagePage> {
             ],
           ),
         ),
-      ),
+]
+      )
+    )
+    )
     );
   }
 
-  Widget _buildLanguageContainer(String title, List<String> languages, double containerHeightFactor) {
-    double screenHeight = MediaQuery.of(context).size.height;
+  Widget _buildLanguageContainer(String title, List<String> languages,
+      double containerHeightFactor) {
+    double screenHeight = MediaQuery
+        .of(context)
+        .size
+        .height;
     double containerHeight = screenHeight * containerHeightFactor;
 
     return Container(
@@ -245,7 +283,8 @@ class _LanguagePageState extends State<LanguagePage> {
                           selectedLanguage = value.toString();
                         });
                       },
-                      activeColor: AppColorConstant.appScendoryColor, // Set your desired color
+                      activeColor:
+                      AppColorConstant.appScendoryColor, // Set your desired color
                     ),
                   ),
                   if (languages.indexOf(language) < languages.length - 1)
@@ -255,27 +294,11 @@ class _LanguagePageState extends State<LanguagePage> {
                       color: AppColorConstant.appText2Color.shade300,
                       thickness: 0.5,
                     ),
-
-                    ListTile(
-                      title: const Text('Finland', style: TextStyle(color: AppColorConstant.appTextColorblack, fontSize: 20, fontWeight: FontWeight.w500),),
-                      trailing: Radio(
-                        value: 'Finland',
-                        groupValue: selectedLanguage,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedLanguage = value.toString();
-                          });
-                        },
-                        activeColor: AppColorConstant.appScendoryColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                ],
+              );
+            }).toList(),
           ),
-        ),
-
+        ],
       ),
     );
   }

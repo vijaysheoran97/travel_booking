@@ -22,7 +22,6 @@ class _LoginScreenState extends State<LoginScreen> {
             color: AppColorConstant.appScendoryColor,
             child: const Column(
               children: [
-                // Add your drawer items here
               ],
             ),
           ),
