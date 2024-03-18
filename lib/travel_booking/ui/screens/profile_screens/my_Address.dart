@@ -16,8 +16,10 @@ class _MyAddressPageState extends State<MyAddressPage> {
 
   @override
   Widget build(BuildContext context) {
+
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -48,11 +50,13 @@ class _MyAddressPageState extends State<MyAddressPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+
         child: ListView(
           children: [
             buildAddressTile('Andy Andrew', '+1234567890', '1234 Your Road No #6789', 'Your City, Country', 1),
             buildAddressTile('Elevenia Kalia', '+1234567890', '1234 Your Road No #6789', 'Your City, Country', 2),
             // Add more addresses as needed
+
           ],
         ),
       ),
@@ -79,6 +83,7 @@ class _MyAddressPageState extends State<MyAddressPage> {
       ),
     );
   }
+
 
   Widget buildAddressTile(String title, String phone, String addressLine1, String addressLine2, int value) {
     return ListTile(
@@ -130,4 +135,5 @@ class _MyAddressPageState extends State<MyAddressPage> {
       ),
     );
   }
+
 }

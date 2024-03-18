@@ -101,6 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onTap: () {
                   Navigator.push(context, CupertinoPageRoute(builder: (context) => const MyAddressPage()));
                 },
+
                 leading: Icon(Icons.location_on_outlined),
                 title: Text(
                   'My Address',
@@ -112,10 +113,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
+
               ListTile(
                 onTap: () {
                   Navigator.push(context, CupertinoPageRoute(builder: (context) => const PaymentPage()));
                 },
+
                 leading: Icon(Icons.account_balance_wallet_outlined),
                 title: Text(
                   'Payment Method',
@@ -134,8 +137,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
+
               ListTile(
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const ChangePasswordPage()));},
+
                 leading: Icon(Icons.lock_outline),
                 title: Text(
                   'Change Password',
@@ -161,6 +166,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               ListTile(
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const SecurityPage()));},
+
                 leading: Icon(Icons.security_outlined),
                 title: Text(
                   'Security',
@@ -172,8 +178,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
+
               ListTile(
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const NotificationPage()));},
+
                 leading: Icon(Icons.notifications_outlined),
                 title: Text(
                   'Notifications',
@@ -192,9 +200,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
+
               ListTile(
                 leading: Icon(Icons.language_outlined),
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const LanguagePage()));},
+
                 title: Text(
                   'Language',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
@@ -222,8 +232,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 15),
                 ),
               ),
+
               ListTile(
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const LegalAndPoliciesPage()));},
+
                 leading: Icon(Icons.privacy_tip_outlined),
                 title: Text(
                   'Legal and Policies',
@@ -235,8 +247,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   color: AppColorConstant.appArrowForwardColor,
                 ),
               ),
+
               ListTile(
                 onTap: () { Navigator.push(context, CupertinoPageRoute(builder: (context) => const HelpAndSupportPage()));},
+
                 leading: Icon(Icons.privacy_tip_outlined),
                 title: Text(
                   'Help & Support',
@@ -255,7 +269,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
                 trailing: Transform.scale(
+
                   scale: 0.9,
+
                   child: Switch(
                     value: isDarkModeEnabled,
                     onChanged: (value) {
@@ -264,10 +280,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         // Add code to handle dark mode switch here
                       });
                     },
+
                     inactiveTrackColor: AppColorConstant.appText2Color,
                     inactiveThumbColor: AppColorConstant.appTextColor,
                     trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
                     activeTrackColor: AppColorConstant.appScendoryColor,
+
                   ),
                 ),
               ),
