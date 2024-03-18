@@ -10,6 +10,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ornare quam vel fa
 consequat ultrices morbi orci semper sit nulla. Leo auctor ut etiam est, amet aliquet ut vivamus. Odio vulputate est id tincidunt fames.
   ''';
 
+
   static const String hiAndyNetherlands = 'Hi, Andy\nNetherlands';
   static const String angelaMayer = 'Angela Mayer\nVerified user.Membership';
   static const String searchHint = 'Search...';

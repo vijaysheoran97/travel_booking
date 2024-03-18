@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 import '../../utils/app_color_constent.dart';
 
 class LanguagePage extends StatefulWidget {
@@ -188,6 +187,7 @@ class _LanguagePageState extends State<LanguagePage> {
                       ),
                     ),
 
+
               _buildLanguageContainer('Suggested Languages', [
                 'English',
                 'English (UK)',
@@ -249,6 +249,7 @@ class _LanguagePageState extends State<LanguagePage> {
                     ),
                   ),
                   if (languages.indexOf(language) < languages.length - 1)
+
 
                     Divider(
                       color: AppColorConstant.appText2Color.shade300,

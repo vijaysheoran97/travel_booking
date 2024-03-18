@@ -10,6 +10,7 @@ import 'package:travel_booking/travel_booking/ui/screens/profile_screens/my_paym
 import 'package:travel_booking/travel_booking/ui/screens/profile_screens/notification.dart';
 import 'package:travel_booking/travel_booking/ui/screens/profile_screens/security.dart';
 
+
 import '../utils/app_color_constent.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -280,9 +281,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       });
                     },
 
-                    thumbColor: MaterialStateProperty.all(AppColorConstant.appTextColor),
-                    trackColor: MaterialStateProperty.all(AppColorConstant.appScendoryColor),
-                    trackOutlineColor: MaterialStateProperty.all(AppColorConstant.appScendoryColor),
+                    inactiveTrackColor: AppColorConstant.appText2Color,
+                    inactiveThumbColor: AppColorConstant.appTextColor,
+                    trackOutlineColor: MaterialStateProperty.all(Colors.transparent),
+                    activeTrackColor: AppColorConstant.appScendoryColor,
 
                   ),
                 ),
